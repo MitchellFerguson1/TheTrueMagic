@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NewProjectThree.iml" filepath="$PROJECT_DIR$/NewProjectThree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MagicLol.iml" filepath="$PROJECT_DIR$/.idea/MagicLol.iml" />
+      <module fileurl="file://C:\Users\logan\AndroidStudioProjects\MagicLol\NewProjectThree.iml" filepath="C:\Users\logan\AndroidStudioProjects\MagicLol\NewProjectThree.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\logan\AndroidStudioProjects\MagicLol\app\app.iml" filepath="C:\Users\logan\AndroidStudioProjects\MagicLol\app\app.iml" />
     </modules>
   </component>
 </project>
