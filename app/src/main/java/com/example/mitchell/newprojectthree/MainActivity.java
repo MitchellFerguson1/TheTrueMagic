@@ -42,3 +42,116 @@ public class MainActivity extends AppCompatActivity {
         return finalNum; //Return finalNum
     }
 }
+
+
+
+
+///* If 1 digit
+// Add that number (ex. 4) to itself (8)
+// Take that number times itself (16)
+// Take that number times itself times plus itself (20)
+// Take that number times itself minus itself (12)
+// Max (9) (18 + 81 + 90 + 72)
+//
+// If two digits
+// Divide the number by 2 (ex. 20) (10)
+// Divide the number by 3 (6)
+// Subtract 1 from the number (19)
+// Subtract 4 from the number (16)
+// Max (99) (49 + 33 + 98 + 95)
+//
+// If three digits
+// Divide the number by 54 (ex. 199) (3)
+// Divide the number by 31 (6)
+// Divide the number by 23 (8)
+// Divide the number by 12 (16)
+// Max (780) (14 + 25 + 33 + 65)
+// */
+//
+//
+//import java.util.Scanner;
+//public class Testing {
+//    public static void main(String[] args) {
+//
+//        Scanner in = new Scanner(System.in); // Scanner shit
+//
+//        String yourName = in.next();
+//
+//        int nameValue = 9; // A test for one, two, and three digit numbers (4 digits should never occur)
+//
+//        String nameValueString = Integer.toString(nameValue);
+//
+//        System.out.println(adjective(nameValueString, nameValue));
+//        System.out.println(noun1(nameValueString, nameValue));
+//        System.out.println(verb(nameValueString, nameValue));
+//        System.out.println(noun2(nameValueString, nameValue)); // These are just to test the values and are temporary
+//
+//
+//    }
+//
+//
+//    public static int adjective(String nameValueString, int nameValue) {
+//        if (nameValueString.length() == 1) {
+//            int Value = nameValue + nameValue;
+//            return Value;
+//        } if (nameValueString.length() == 2) {
+//            int Value = nameValue / 2;
+//            return Value;
+//        } if (nameValueString.length() == 3) {
+//            int Value = nameValue / 54;
+//            return Value;
+//        } else {
+//            System.out.print("you goofed up you bafoon");
+//            return 0;
+//        }
+//    }
+//
+//    public static int noun1(String nameValueString, int nameValue) {
+//        if (nameValueString.length() == 1) {
+//            int Value = nameValue * nameValue;
+//            return Value;
+//        } if (nameValueString.length() == 2) {
+//            int Value = nameValue / 3;
+//            return Value;
+//        } if (nameValueString.length() == 3) {
+//            int Value = nameValue / 31;
+//            return Value;
+//        } else {
+//            System.out.print("you goofed up you bafoon");
+//            return 0;
+//        }
+//    }
+//
+//    public static int verb(String nameValueString, int nameValue) {
+//        if (nameValueString.length() == 1) {
+//            int Value = nameValue * nameValue + nameValue;
+//            return Value;
+//        } if (nameValueString.length() == 2) {
+//            int Value = nameValue - 1;
+//            return Value;
+//        } if (nameValueString.length() == 3) {
+//            int Value = nameValue / 23;
+//            return Value;
+//        } else {
+//            System.out.print("you goofed up you bafoon");
+//            return 0;
+//        }
+//    }
+//
+//    public static int noun2(String nameValueString, int nameValue) {
+//        if (nameValueString.length() == 1) {
+//            int Value = nameValue * nameValue - nameValue;
+//            return Value;
+//        } if (nameValueString.length() == 2) {
+//            int Value = nameValue - 4;
+//            return Value;
+//        } if (nameValueString.length() == 3) {
+//            int Value = nameValue / 12;
+//            return Value;
+//        } else {
+//            System.out.print("you goofed up you bafoon");
+//            return 0;
+//        }
+//    }
+//
+//}
