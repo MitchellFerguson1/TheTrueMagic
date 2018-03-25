@@ -110,13 +110,13 @@ public class MainActivity extends AppCompatActivity {
 //
 //    public static int noun1(String nameValueString, int nameValue) {
 //        if (nameValueString.length() == 1) {
-//            int Value = nameValue * nameValue;
+//            int Value = nameValue * 200;
 //            return Value;
 //        } if (nameValueString.length() == 2) {
-//            int Value = nameValue / 3;
+//            int Value = nameValue * 19;
 //            return Value;
 //        } if (nameValueString.length() == 3) {
-//            int Value = nameValue / 31;
+//            int Value = nameValue * 2;
 //            return Value;
 //        } else {
 //            System.out.print("you goofed up you bafoon");
@@ -142,13 +142,13 @@ public class MainActivity extends AppCompatActivity {
 //
 //    public static int noun2(String nameValueString, int nameValue) {
 //        if (nameValueString.length() == 1) {
-//            int Value = nameValue * nameValue - nameValue;
+//            int Value = nameValue * 200;
 //            return Value;
 //        } if (nameValueString.length() == 2) {
-//            int Value = nameValue - 4;
+//            int Value = nameValue * 26;
 //            return Value;
 //        } if (nameValueString.length() == 3) {
-//            int Value = nameValue / 12;
+//            int Value = nameValue * 3;
 //            return Value;
 //        } else {
 //            System.out.print("you goofed up you bafoon");
