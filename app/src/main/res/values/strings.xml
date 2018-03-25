@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">New Project Three</string>
+    <string name="name_prompt">Enter your name:</string>
+    <string name="name_placeholder">Your name here!</string>
+    <string name="enter">Enter!</string>
+    <string name="successful_test_placeholder">Successful</string>
 </resources>
