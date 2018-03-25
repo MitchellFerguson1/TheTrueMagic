@@ -28,15 +28,17 @@ public class MainActivity extends AppCompatActivity {
         TextView newNameDisplay = findViewById(R.id.newNameDisplay); //Make the new name display a usable variable
         EditText nameText = findViewById(R.id.nameInput); //Make the user input a variable
         int nameAsNumber = nameTotalNumber(nameText.getText().toString()); //Grab the user input, convert it to a string, and convert it to a number
-        newNameDisplay.setText(nameAsNumber);
+        newNameDisplay.setText(String.format(String.valueOf(nameAsNumber)));
     }
 
     private int nameTotalNumber(String name){
-        int finalNum = -1;
-        for(char letter : name.toCharArray()){ //Create a for each loop to find the proper letter
-            for(int i = 0; i < alphabet.length; i++){
-                if (alphabet[i] == letter) //Make sure the letters match
-                    finalNum+=alphabetNumbers[i]; //Use that index to get a number from alphabetNumbers and add it to final num
+        int finalNum = 0;
+        for(char letter : name.toUpperCase().toCharArray()){ //Create a for each loop to find the proper letter
+            for(int i = 0; i < alphabet.length - 1; i++){
+                if (alphabet[i] == letter) { //Make sure the letters match
+                    finalNum += alphabetNumbers[i]; //Use that index to get a number from alphabetNumbers and add it to final num
+                    break;
+                }
             }
         }
         return finalNum; //Return finalNum
