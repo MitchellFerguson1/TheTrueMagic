@@ -62,22 +62,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //    public static int adjective(String nameValueString, int nameValue) {
-//        if (nameValueString.length() == 1) {
-//            int Value = nameValue + nameValue;
-//            return Value;
-//        } if (nameValueString.length() == 2) {
-//            int Value = nameValue / 2;
-//            return Value;
-//        } if (nameValueString.length() == 3) {
-//            int Value = nameValue / 54;
-//            return Value;
-//        } else {
-//            System.out.print("you goofed up you bafoon");
-//            return 0;
-//        }
-//    }
-
     private int verbNumberCalculator(int nameValue){
         String nameValueString = Integer.toString(nameValue);
         switch (nameValueString.length()){
@@ -92,57 +76,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //    public static int verb(String nameValueString, int nameValue) {
-//        if (nameValueString.length() == 1) {
-//            int Value = nameValue * nameValue + nameValue;
-//            return Value;
-//        } if (nameValueString.length() == 2) {
-//            int Value = nameValue - 1;
-//            return Value;
-//        } if (nameValueString.length() == 3) {
-//            int Value = nameValue / 23;
-//            return Value;
-//        } else {
-//            System.out.print("you goofed up you bafoon");
-//            return 0;
-//        }
-//    }
+    private int nounNumberCalculatorFirst(int nameValue){
+        String nameValueString = Integer.toString(nameValue);
+        switch (nameValueString.length()){
+            case 1:
+                return nameValue * 200;
+            case 2:
+                return nameValue * 19;
+            case 3:
+                return nameValue * 2;
+            default:
+                return -1;
+        }
+    }
 
-    private int nounNumberCalculator(int nameValue)
+    private int nounNumberCalculatorSecond(int nameValue){
+        String nameValueString = Integer.toString(nameValue);
+        switch (nameValueString.length()){
+            case 1:
+                return nameValue * 201;
+            case 2:
+                return nameValue * 26;
+            case 3:
+                return nameValue * 3;
+            default:
+                return -1;
+        }
+    }
 }
-
-
-
-//    public static int noun1(String nameValueString, int nameValue) {
-//        if (nameValueString.length() == 1) {
-//            int Value = nameValue * 200;
-//            return Value;
-//        } if (nameValueString.length() == 2) {
-//            int Value = nameValue * 19;
-//            return Value;
-//        } if (nameValueString.length() == 3) {
-//            int Value = nameValue * 2;
-//            return Value;
-//        } else {
-//            System.out.print("you goofed up you bafoon");
-//            return 0;
-//        }
-//    }
-
-//    public static int noun2(String nameValueString, int nameValue) {
-//        if (nameValueString.length() == 1) {
-//            int Value = nameValue * 200;
-//            return Value;
-//        } if (nameValueString.length() == 2) {
-//            int Value = nameValue * 26;
-//            return Value;
-//        } if (nameValueString.length() == 3) {
-//            int Value = nameValue * 3;
-//            return Value;
-//        } else {
-//            System.out.print("you goofed up you bafoon");
-//            return 0;
-//        }
-//    }
-//
-//}
