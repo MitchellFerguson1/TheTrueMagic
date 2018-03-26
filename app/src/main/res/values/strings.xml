@@ -4,4 +4,7 @@
     <string name="name_placeholder">Your name here!</string>
     <string name="enter">Enter!</string>
     <string name="successful_test_placeholder">Successful</string>
+    <string name="noun_placeholder">Noun number:</string>
+    <string name="verb_placeholder">Verb number:</string>
+    <string name="adjective_placeholder">Adjective number:</string>
 </resources>
