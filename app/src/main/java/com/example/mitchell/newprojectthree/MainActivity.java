@@ -15,6 +15,7 @@ import com.google.android.gms.ads.MobileAds;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         initializer();
+
     }
 
     private void initializer(){
@@ -79,6 +81,18 @@ public class MainActivity extends AppCompatActivity {
 
         //Logic to find the other numbers here.
         //Logic made by Logan, implemented by Mitchell
+
+
+        String nounOneString = nounsOne.get(nounNumberCalculatorFirst(nameAsNumber));
+        String nounTwoString = nounsTwo.get(nounNumberCalculatorSecond(nameAsNumber));
+        String verbString = verbs.get(verbNumberCalculator(nameAsNumber));
+        String adjectiveString = adjectives.get(adjectiveNumberCalculations(nameAsNumber));
+
+        // Reads the files and initializes the strings depending on which line the words are at in their text files
+
+        TextView displayThoseThings = findViewById(R.id.nounNumberDisplay);
+        displayThoseThings.setText();
+
     }
 
     private int nameTotalNumber(String name){
