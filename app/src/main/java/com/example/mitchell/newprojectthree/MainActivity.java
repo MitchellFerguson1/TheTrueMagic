@@ -14,6 +14,10 @@ import com.google.android.gms.ads.MobileAds;
 
 import org.w3c.dom.Text;
 
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> verbs = new ArrayList<>();
     private ArrayList<String> adjectives = new ArrayList<>();
 
-    private AdView mAdView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,57 +41,56 @@ public class MainActivity extends AppCompatActivity {
 
         //Ad stuff
         MobileAds.initialize(this, "ca-app-pub-5506113922585843~5706663344");
-        mAdView = findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        initializer();
+        try {
+            initializer();
+        } catch (IOException ignored) {
+
+        }
 
     }
 
-    private void initializer(){
+    private void initializer() throws IOException {
         //NounsOne
-        Scanner s = new Scanner("Noun1.txt");
+        Scanner s = new Scanner(new DataInputStream(getAssets().open("Noun1")));
         while(s.hasNextLine())
             nounsOne.add(s.nextLine());
         s.close();
 
         //NounsTwo
-        s = new Scanner("Noun2.txt");
+        s = new Scanner(new DataInputStream(getAssets().open("Noun2")));
         while(s.hasNextLine())
             nounsTwo.add(s.nextLine());
         s.close();
 
         //verbs
-        s = new Scanner("Verbs.txt");
+        s = new Scanner(new DataInputStream(getAssets().open("Verbs")));
         while(s.hasNextLine())
             verbs.add(s.nextLine());
         s.close();
 
         //adjectives
-        s = new Scanner("Adjectives.txt");
+        s = new Scanner(new DataInputStream(getAssets().open("Adjectives")));
         while(s.hasNextLine())
             adjectives.add(s.nextLine());
         s.close();
     }
 
     public void buttonClickTest(View v){
-        TextView newNameDisplay = findViewById(R.id.newNameDisplay); //Make the new name display a usable variable
         EditText nameText = findViewById(R.id.nameInput); //Make the user input a variable
         int nameAsNumber = nameTotalNumber(nameText.getText().toString()); //Grab the user input, convert it to a string, and convert it to a number
-        newNameDisplay.setText(String.valueOf(nameAsNumber)); //Display the number
 
         //Logic to find the other numbers here.
         //Logic made by Logan, implemented by Mitchell
-
-
         String nounOneString = nounsOne.get(nounNumberCalculatorFirst(nameAsNumber));
         String nounTwoString = nounsTwo.get(nounNumberCalculatorSecond(nameAsNumber));
         String verbString = verbs.get(verbNumberCalculator(nameAsNumber));
         String adjectiveString = adjectives.get(adjectiveNumberCalculations(nameAsNumber));
 
         // Reads the files and initializes the strings depending on which line the words are at in their text files
-
         TextView displayThoseThings = findViewById(R.id.nounNumberDisplay);
         displayThoseThings.setText(String.format("%s %s %s %s", adjectiveString, nounOneString, verbString, nounTwoString));
 
@@ -111,57 +112,72 @@ public class MainActivity extends AppCompatActivity {
     //Logic for conversions
     private int adjectiveNumberCalculations(int nameValue){
         String nameValueString = Integer.toString(nameValue);
+        int hold = -1;
         switch (nameValueString.length()){
             case 1:
-                return nameValue + nameValue;
+                hold = nameValue + nameValue;
+                break;
             case 2:
-                return nameValue / 2;
+                hold = nameValue / 2;
+                break;
             case 3:
-                return nameValue / 54;
-            default:
-                return -1;
+                hold = nameValue / 54;
+                break;
         }
+        return hold;
     }
 
     private int verbNumberCalculator(int nameValue){
         String nameValueString = Integer.toString(nameValue);
+        int hold = -1;
         switch (nameValueString.length()){
             case 1:
-                return nameValue * nameValue + nameValue;
+                hold = nameValue * nameValue + nameValue;
+                break;
             case 2:
-                return nameValue - 1;
+                hold = nameValue - 1;
+                break;
             case 3:
-                return nameValue / 23;
-            default:
-                return -1;
+                hold = nameValue / 23;
+                break;
         }
+        return hold;
     }
 
     private int nounNumberCalculatorFirst(int nameValue){
         String nameValueString = Integer.toString(nameValue);
+        int hold;
         switch (nameValueString.length()){
             case 1:
-                return nameValue * 200;
+                hold = nameValue * 200;
+                break;
             case 2:
-                return nameValue * 19;
+                hold = nameValue * 19;
+                break;
             case 3:
-                return nameValue * 2;
+                hold = nameValue * 2;
+                break;
             default:
-                return -1;
+                hold = -1;
+                break;
         }
+        return hold;
     }
 
     private int nounNumberCalculatorSecond(int nameValue){
         String nameValueString = Integer.toString(nameValue);
+        int hold = -1;
         switch (nameValueString.length()){
             case 1:
-                return nameValue * 201;
+                hold = nameValue * 201;
+                break;
             case 2:
-                return nameValue * 26;
+                hold = nameValue * 26;
+                break;
             case 3:
-                return nameValue * 3;
-            default:
-                return -1;
+                hold = nameValue * 3;
+                break;
         }
+        return hold;
     }
 }

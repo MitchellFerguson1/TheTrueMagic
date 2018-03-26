@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://T:\Apps\NewProjectThree\MagicLol.iml" filepath="T:\Apps\NewProjectThree\MagicLol.iml" />
       <module fileurl="file://$PROJECT_DIR$/NewProjectThree.iml" filepath="$PROJECT_DIR$/NewProjectThree.iml" />
-      <module fileurl="file://C:\Users\logan\AndroidStudioProjects\MagicLol\NewProjectThree.iml" filepath="C:\Users\logan\AndroidStudioProjects\MagicLol\NewProjectThree.iml" />
-      <module fileurl="file://C:\Users\arcti\StudioProjects\TheTrueMagic\NewProjectThree.iml" filepath="C:\Users\arcti\StudioProjects\TheTrueMagic\NewProjectThree.iml" />
-      <module fileurl="file://T:\Apps\NewProjectThree\TheTrueMagic.iml" filepath="T:\Apps\NewProjectThree\TheTrueMagic.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\arcti\StudioProjects\TheTrueMagic\app\app.iml" filepath="C:\Users\arcti\StudioProjects\TheTrueMagic\app\app.iml" />
     </modules>
   </component>
 </project>
