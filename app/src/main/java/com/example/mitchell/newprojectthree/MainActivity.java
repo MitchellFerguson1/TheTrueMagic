@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -25,10 +29,19 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> verbs = new ArrayList<>();
     private ArrayList<String> adjectives = new ArrayList<>();
 
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Ad stuff
+        MobileAds.initialize(this, "ca-app-pub-5506113922585843~5706663344");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         initializer();
     }
 
