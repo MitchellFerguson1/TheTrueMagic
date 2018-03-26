@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class MainActivity extends AppCompatActivity {
     private char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                                     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
@@ -17,11 +20,42 @@ public class MainActivity extends AppCompatActivity {
     private int[] alphabetNumbers = {23, 14, 19, 7, 10, 5, 26, 1, 16, 3, 22, 8,
                                         15, 21, 12, 6, 2, 13, 20, 11, 25, 4, 9,
                                         24, 18, 17};
+    private ArrayList<String> nounsOne = new ArrayList<>();
+    private ArrayList<String> nounsTwo = new ArrayList<>();
+    private ArrayList<String> verbs = new ArrayList<>();
+    private ArrayList<String> adjectives = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initializer();
+    }
+
+    private void initializer(){
+        //NounsOne
+        Scanner s = new Scanner("Noun1.txt");
+        while(s.hasNextLine())
+            nounsOne.add(s.nextLine());
+        s.close();
+
+        //NounsTwo
+        s = new Scanner("Noun2.txt");
+        while(s.hasNextLine())
+            nounsTwo.add(s.nextLine());
+        s.close();
+
+        //verbs
+        s = new Scanner("Verbs.txt");
+        while(s.hasNextLine())
+            verbs.add(s.nextLine());
+        s.close();
+
+        //adjectives
+        s = new Scanner("Adjectives.txt");
+        while(s.hasNextLine())
+            adjectives.add(s.nextLine());
+        s.close();
     }
 
     public void buttonClickTest(View v){
