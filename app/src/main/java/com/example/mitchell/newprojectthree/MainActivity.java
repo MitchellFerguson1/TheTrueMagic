@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         // Reads the files and initializes the strings depending on which line the words are at in their text files
 
         TextView displayThoseThings = findViewById(R.id.nounNumberDisplay);
-        displayThoseThings.setText();
+        displayThoseThings.setText(String.format("%s %s %s %s", adjectiveString, nounOneString, verbString, nounTwoString));
 
     }
 
